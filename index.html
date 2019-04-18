@@ -8,8 +8,8 @@
     <meta name="author" content="Nathan Davies - 101094460">
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script type="text/javascript" src="scripts/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <!-- <script type="text/javascript" src="scripts/script.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
 
     <title>Home | Crime Data Visualisation</title>
 
@@ -18,18 +18,21 @@
 <body>
     <h1>Crime Data Visualisation</h1>
 
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-
-
+    <div class="center">
+        <div class="clearfix">
+            <div class="box" onclick="location.href='barchart.html';" style="cursor: pointer;">
+                <p>Rates of types of crimes - Bar Chart</p>
+            </div>
+            <div class="box" onclick="location.href='scatterplot.html';" style="cursor: pointer;">
+                <p>Crime data for specific crimes over time - Scatter Plot</p>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="box" onclick="location.href='map.html';" style="cursor: pointer;">
+                <p>Regional Crime Rate Map</p>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
     <br>

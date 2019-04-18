@@ -1,0 +1,45 @@
+/* Main Site Theme*/
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body {
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.box {
+    float: left;
+    width: 46%;
+    padding: 1em;
+    margin: auto;
+    border: 1px solid grey;
+    margin: 0.5em;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    padding-bottom: 1em;
+}

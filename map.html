@@ -10,6 +10,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/map.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/theme.css">
+    
 
     <title>Map | Crime Data Visualisation</title>
     <style>
@@ -21,18 +22,20 @@
 
 <body>
     <h1>Crime Data Visualisation - Map</h1>
-    <button id="button1" onclick="Change2009()" type="button" name="button">2009</button>
-    <button id="button1" onclick="Change2010()" type="button" name="button">2010</button>
-    <button id="button1" onclick="Change2011()" type="button" name="button">2011</button>
-    <button id="button1" onclick="Change2012()" type="button" name="button">2012</button>
-    <button id="button1" onclick="Change2013()" type="button" name="button">2013</button>
-    <button id="button1" onclick="Change2014()" type="button" name="button">2014</button>
-    <button id="button1" onclick="Change2015()" type="button" name="button">2015</button>
-    <button id="button1" onclick="Change2016()" type="button" name="button">2016</button>
-    <button id="button1" onclick="Change2017()" type="button" name="button">2017</button>
-    <button id="button1" onclick="Change2018()" type="button" name="button">2018</button>
-    
-    <p id="chart"></p>
+    <div id="chart">
+        <div id="map-legend">
+            <br>
+            <div class="map-title">
+                <h2>Crime Rates Victoria</h2>
+                <div class="map-legend-text"></div>
+            </div>
+            <div class="buttons">
+                <button id="prev" type="button" name="button">&#60;&#60;</button>
+                2xxx
+                <button id="next" type="button" name="button">&#62;&#62;</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 <footer>

@@ -1,9 +1,8 @@
 /* Main Site Theme*/
 
 /* Import Fonts */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
 body {
     padding-left: 2em;
     padding-right: 2em;
@@ -38,9 +37,45 @@ a {
     color: black;
 }
 
-footer {
+#map-legend {
+    text-align: center;
+}
+
+.buttons {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 7px;
+    font-size: 0.9em;
+    pointer-events: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+    -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+/* footer {
     position: absolute;
     bottom: 0;
     height: 60px;
     padding-bottom: 2em;
+} */
+
+button {
+    background-color: lightgrey;
+    border: none;
+    color: white;
+    padding: 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
 }

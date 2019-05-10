@@ -31,11 +31,6 @@ function geomap(crimedata) {
         .style("opacity", 0);
 
 
-    var zoom = d3.zoom()
-        .scaleExtent([1, 40])
-        .translateExtent([[-100, -100], [width + 90, height + 100]])
-        .on("zoom", zoomed);
-
     // d3.select("prev").on("click", function(){
 
     // });
@@ -45,23 +40,24 @@ function geomap(crimedata) {
         console.log(data);
         var color = d3.scaleThreshold()
             .domain([
-                d3.min(data, function (d) { return d.crimes; }),
+                0,
                 4000,
                 8000,
                 12000,
                 16000,
                 20000,
+                24000,
                 d3.max(data, function (d) { return d.crimes; })
             ])
-            .range(d3.schemeReds[7]);
+            .range(d3.schemeReds[8]);
 
         var max_val = d3.max(d3.values(data))
         console.log(color);
 
-        legend_labels = ["< 4000", "4000 - 8000", "8000 - 12000", "12000 - 16000", "16000 - 20000", "20000 >"];
+        legend_labels = ["< 4000", "4000 - 8000", "8000 - 12000", "12000 - 16000", "16000 - 20000", "20000 - 24000","24000 >"];
 
         var legend = svg.selectAll(".map-legend")
-            .data([0, 4000, 8000, 12000, 16000, 20000])
+            .data([0, 4000, 8000, 12000, 16000, 20000, 24000])
             .enter().append("g")
             .attr("class", "legend");
 
@@ -69,7 +65,7 @@ function geomap(crimedata) {
 
         legend.append("rect")
             .attr("x", w / 1.3)
-            .attr("y", function (d, i) { return 200 - (i * ls_h) - 2 * ls_h; })
+            .attr("y", function (d, i) { return 250 - (i * ls_h) - 2 * ls_h; })
             .attr("width", ls_w)
             .attr("height", ls_h)
             .style("fill", function (d, i) { return color(d); });
@@ -77,13 +73,13 @@ function geomap(crimedata) {
 
         legend.append("text")
             .attr("x", w / 1.3)
-            .attr("y", 50)
+            .attr("y", 70)
             .text("Legend:");
 
 
         legend.append("text")
             .attr("x", w / 1.25)
-            .attr("y", function (d, i) { return 200 - (i * ls_h) - ls_h - 4; })
+            .attr("y", function (d, i) { return 250 - (i * ls_h) - ls_h - 4; })
             .text(function (d, i) { return legend_labels[i]; });
 
 
@@ -134,7 +130,11 @@ function geomap(crimedata) {
                     } else {
                         return "#ccc"
                     }
-                });
+                })
+                // .call(d3.zoom().on("zoom", function () {
+                //     svg.attr("transform", d3.event.transform)
+                // }));
+
         }).catch(function (error) {
             alert(error);
         });

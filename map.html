@@ -15,14 +15,14 @@
     <title>Map | Crime Data Visualisation</title>
     <style>
         path {
-            stroke: white;
+            stroke: black;
         }
     </style>
 </head>
 
 <body>
     <h1>Crime Data Visualisation - Map</h1>
-    <div id="chart">
+    <div style="margin-top: -50px;" id="chart">
         <div id="map-legend">
             <br>
             <div class="map-title">
@@ -30,10 +30,11 @@
                 <div class="map-legend-text"></div>
             </div>
             <div class="buttons">
-                <button id="prev" type="button" name="button">&#60;&#60;</button>
-                2xxx
-                <button id="next" type="button" name="button">&#62;&#62;</button>
+                <button id="prev" onclick="ChangePrev()" type="button" name="button">&#60;&#60;</button>
+                <span id="year"></span>
+                <button id="next" onclick="ChangeNext()" type="button" name="button">&#62;&#62;</button>
             </div>
+            <div class="map-legend"></div>
         </div>
     </div>
 

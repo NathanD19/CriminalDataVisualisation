@@ -31,9 +31,18 @@ function geomap(crimedata) {
         .style("opacity", 0);
 
 
-    // d3.select("prev").on("click", function(){
+    const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .on('zoom', zoomed);
 
-    // });
+    svg.call(zoom);
+
+
+    function zoomed() {
+        svg.selectAll('path').attr('transform', d3.event.transform);
+    }
+
+
 
     d3.csv(crimedata).then(function (data) {
 
@@ -50,9 +59,6 @@ function geomap(crimedata) {
                 d3.max(data, function (d) { return d.crimes; })
             ])
             .range(d3.schemeReds[8]);
-
-        var max_val = d3.max(d3.values(data))
-        console.log(color);
 
         legend_labels = ["< 4000", "4000 - 8000", "8000 - 12000", "12000 - 16000", "16000 - 20000", "20000 - 24000", "24000 >"];
 
@@ -131,9 +137,12 @@ function geomap(crimedata) {
                         return "#ccc"
                     }
                 })
-            // .call(d3.zoom().on("zoom", function () {
-            //     svg.attr("transform", d3.event.transform)
-            // }));
+
+                $("#reset").click(() => {
+                    svg.transition()
+                        .duration(750)
+                        .call(zoom.transform, d3.zoomIdentity);
+                });
 
         }).catch(function (error) {
             alert(error);
@@ -169,6 +178,7 @@ function ChangeNext() {
         geomap("data/LGA-data-" + __counter__ + ".csv");
     }
 }
+
 
 __counter__ = 2016;
 

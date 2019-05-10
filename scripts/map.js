@@ -54,7 +54,7 @@ function geomap(crimedata) {
         var max_val = d3.max(d3.values(data))
         console.log(color);
 
-        legend_labels = ["< 4000", "4000 - 8000", "8000 - 12000", "12000 - 16000", "16000 - 20000", "20000 - 24000","24000 >"];
+        legend_labels = ["< 4000", "4000 - 8000", "8000 - 12000", "12000 - 16000", "16000 - 20000", "20000 - 24000", "24000 >"];
 
         var legend = svg.selectAll(".map-legend")
             .data([0, 4000, 8000, 12000, 16000, 20000, 24000])
@@ -131,9 +131,9 @@ function geomap(crimedata) {
                         return "#ccc"
                     }
                 })
-                // .call(d3.zoom().on("zoom", function () {
-                //     svg.attr("transform", d3.event.transform)
-                // }));
+            // .call(d3.zoom().on("zoom", function () {
+            //     svg.attr("transform", d3.event.transform)
+            // }));
 
         }).catch(function (error) {
             alert(error);
@@ -146,26 +146,28 @@ function geomap(crimedata) {
 }
 
 function ChangePrev() {
-    d3.select("svg").remove();
     __counter__ -= 1;
     if (__counter__ == 2008) {
         __counter__ += 1;
         alert("Minimum dataset is 2009");
+    } else {
+        d3.select("svg").remove();
+        document.getElementById('year').innerHTML = __counter__;
+        geomap("data/LGA-data-" + __counter__ + ".csv");
     }
-    document.getElementById('year').innerHTML = __counter__;
-    geomap("data/LGA-data-" + __counter__ + ".csv");
 }
 
 
 function ChangeNext() {
-    d3.select("svg").remove();
     __counter__ += 1;
     if (__counter__ == 2019) {
         __counter__ -= 1;
         alert("Maximum dataset is 2018");
+    } else {
+        d3.select("svg").remove();
+        document.getElementById('year').innerHTML = __counter__;
+        geomap("data/LGA-data-" + __counter__ + ".csv");
     }
-    document.getElementById('year').innerHTML = __counter__;
-    geomap("data/LGA-data-" + __counter__ + ".csv");
 }
 
 __counter__ = 2016;

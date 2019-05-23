@@ -1,7 +1,7 @@
-crime_type,value
-A Crimes against the person,491999
-B Property and deception offences,2351406
-C Drug offences,130332
-D Public order and security offences,243752
-E Justice procedures offences,270556
-F Other offences,11167
+crime_type,value,details
+Crimes against the person,491999,"Homicide and related offences<br>Assault and related offences<br>Sexual offences<br>Abduction and related offences<br>Robbery<br>Blackmail and extortion<br>Dangerous and negligent acts endangering people<br>Stalking, harassment and threatening behaviour"
+Property and deception offences,2351406,"Arson<br>Property damage<br>Theft<br>Deception<br>Bribery<br>Burglary/Break and enter"
+Drug offences,130332,"Drug dealing and trafficking<br>Cultivate or manufacture drugs<br>Drug use and possession<br>Other drug offences"
+Public order and security offences,243752,"Weapons and explosives offences<br>Disorderly and offensive conduct<br>Public nuisance offences<br>Public security offences"
+Justice procedures offences,270556,"Justice procedures<br>Breaches of orders"
+Other offences,11167,"Regulatory driving offences<br>Transport regulation offences<br>Other government regulatory offences<br>Miscellaneous offences"

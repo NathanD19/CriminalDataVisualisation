@@ -1,0 +1,26 @@
+[
+  {
+    "crime_type": "Crimes against the person",
+    "value": 491999
+  },
+  {
+    "crime_type": "Property and deception offences",
+    "value": 2351406
+  },
+  {
+    "crime_type": "Drug offences",
+    "value": 130332
+  },
+  {
+    "crime_type": "Public order and security offences",
+    "value": 243752
+  },
+  {
+    "crime_type": "Justice procedures offences",
+    "value": 270556
+  },
+  {
+    "crime_type": "Other offences",
+    "value": 11167
+  }
+]

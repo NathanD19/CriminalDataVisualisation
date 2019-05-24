@@ -14,14 +14,16 @@
     <title>Home | Crime Data Visualisation</title>
 
 </head>
+<header>
+    <h1>Victorian Crime Data Visualisation</h1>
+</header>
 
 <body>
-    <h1>Crime Data Visualisation</h1>
-
+    <br>
     <div class="center">
         <div class="clearfix">
-            <div class="box" onclick="location.href='barchart.html';" style="cursor: pointer;">
-                <p>Rates of crimes types - Bar Chart</p>
+            <div id="box1" class="box" onclick="location.href='barchart.html';" style="cursor: pointer;">
+                <p>Total Incident Rates for Offense Division</p>
             </div>
             <div class="box" onclick="location.href='scatterplot.html';" style="cursor: pointer;">
                 <p>Crime data for specific crimes over time - Line Chart</p>
@@ -29,18 +31,61 @@
         </div>
         <div class="clearfix">
             <div class="box" onclick="location.href='map.html';" style="cursor: pointer;">
-                <p>Regional Crime Rate Map</p>
+                <p>Crime Rates per LGA Victoria</p>
             </div>
             <div class="box" onclick="location.href='barchart_crimes_overtime.html';" style="cursor: pointer;">
                 <p>Crime Data Over Time - Bar Chart</p>
             </div>
         </div>
     </div>
-    <a href="https://mercury.swin.edu.au/cos30045/s101094460/visualisation/map.html">https://mercury.swin.edu.au/cos30045/s101094460/visualisation/map.html</a>
+    <div id="data_source_information" style="float:left;">
+        <h2>Data Source</h2>
+        <p>
+            Victorian Crime Data has been sourced from Crime Statistics Agency (CSA):
+            <a style="text-decoration:underline"
+                href="https://www.crimestatistics.vic.gov.au/">https://www.crimestatistics.vic.gov.au/</a>
+        </p>
+        <p>
+            CSA is responsible for processing, analysing and publishing Victorian crime statistics, independent of
+            Victoria Police.
+        </p>
+
+        <p>
+            The data sourced is a master excel with multiple tables that hold criminal incident data. <br>
+            This data includes rates of crime types and crime sub groups, incident location data, family violence and
+            incident investigation status
+        </p>
+
+    </div>
+    <div style="float: right;">
+        <figure>
+            <a href="https://www.crimestatistics.vic.gov.au/">
+                <img style="height: 170px;" src="images/crime_stats_logo.jpg" alt="logo">
+                <br><br>
+                <figcaption> https://www.crimestatistics.vic.gov.au/
+            </a> </figcaption>
+        </figure>
+    </div>
+
+    <p style="clear:both;">
+        Visualisation URL:
+        <a style="text-decoration:underline"
+            href="https://mercury.swin.edu.au/cos30045/s101094460/visualisation/index.html">
+            https://mercury.swin.edu.au/cos30045/s101094460/visualisation/index.html
+        </a>
+    </p>
+
 </body>
+
 <footer>
     <br>
     <span>COS30045 - Data Visualisation<br>Nathan Davies - 101094460</span>
 </footer>
+
+<style>
+
+function 
+
+</style>
 
 </html>

@@ -1,5 +1,5 @@
 function init() {
-    document.getElementById('year').innerHTML = __counter__;
+    document.getElementById("date_select").value = __counter__;
     geomap("data/LGA-data-" + __counter__ + ".csv");
 }
 
@@ -82,11 +82,26 @@ function geomap(crimedata) {
             .attr("y", 70)
             .text("Legend:");
 
+        svg.append("text")
+            .attr("x", w / 1.25)
+            .attr("y", h / 2.35)
+            .attr("id","undefined")
+            .attr("font-weight", "normal")
+            .text("Undefined");
+
+        legend.append("rect")
+            .attr("x", w / 1.3)
+            .attr("y", h / 2.5)
+            .attr("width", ls_w)
+            .attr("height", ls_h)
+            .style("fill", "#ccc");
+
 
         legend.append("text")
             .attr("x", w / 1.25)
             .attr("y", function (d, i) { return 250 - (i * ls_h) - ls_h - 4; })
             .text(function (d, i) { return legend_labels[i]; });
+
 
 
 
@@ -138,11 +153,11 @@ function geomap(crimedata) {
                     }
                 })
 
-                $("#reset").click(() => {
-                    svg.transition()
-                        .duration(750)
-                        .call(zoom.transform, d3.zoomIdentity);
-                });
+            $("#reset").click(() => {
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.transform, d3.zoomIdentity);
+            });
 
         }).catch(function (error) {
             alert(error);
@@ -153,6 +168,23 @@ function geomap(crimedata) {
     });
 
 }
+
+function UpdateMap() {
+
+    d3.select("svg").remove();
+    __counter__ = document.getElementById("date_select").value
+    geomap("data/LGA-data-" + __counter__ + ".csv");
+
+}
+
+__counter__ = 2016;
+
+window.onload = init;
+
+
+
+
+// Legacy Functions
 
 function ChangePrev() {
     __counter__ -= 1;
@@ -178,10 +210,3 @@ function ChangeNext() {
         geomap("data/LGA-data-" + __counter__ + ".csv");
     }
 }
-
-
-__counter__ = 2016;
-
-window.onload = init;
-
-

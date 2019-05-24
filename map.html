@@ -7,11 +7,11 @@
     <meta name="keywords" content="HTML, CSS, D3" />
     <meta name="author" content="Nathan Davies - 101094460">
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="scripts/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/map.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/theme.css">
-    
+
 
     <title>Map | Crime Data Visualisation</title>
     <style>
@@ -20,20 +20,35 @@
         }
     </style>
 </head>
+<header>
+    <h1><a style="color: white;" href="./index.html">Victorian Crime Data Visualisation</a></h1>
+</header>
 
 <body>
-    <h1>Crime Data Visualisation - Map</h1>
-    <div style="margin-top: -50px;" id="chart">
+    <div id="chart">
         <div id="map-legend">
-            <br>
+            
             <div class="map-title">
-                <h2>Crime Rates Victoria</h2>
+                <h2>Crime Rates per LGA Victoria</h2>
                 <div class="map-legend-text"></div>
             </div>
             <div class="buttons">
-                <button id="prev" onclick="ChangePrev()" type="button" name="button">&#60;&#60;</button>
+                <!-- <button id="prev" onclick="ChangePrev()" type="button" name="button">&#60;&#60;</button>
                 <span id="year"></span>
-                <button id="next" onclick="ChangeNext()" type="button" name="button">&#62;&#62;</button>
+                <button id="next" onclick="ChangeNext()" type="button" name="button">&#62;&#62;</button> -->
+                <select id="date_select" onchange="UpdateMap()">
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                </select>
+
                 <button id="reset">Reset Zoom</button>
             </div>
         </div>

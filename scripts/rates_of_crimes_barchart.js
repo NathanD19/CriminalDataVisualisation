@@ -14,7 +14,7 @@ function svgChartCreate(data) {
 
     var width = 1100 - margin.left - margin.right;
 
-    var height = 520 - margin.top - margin.bottom;
+    var height = 600 - margin.top - margin.bottom;
 
     var xScale = d3.scaleBand().range([0, width], .03)
 
@@ -71,11 +71,11 @@ function svgChartCreate(data) {
         .attr("height", function (d) { return height - yScale(d.value); })
         .attr("fill", function (d) {
             if (d.value > 1500000) {
-                return "red";
+                return "rgb(153, 0, 13)";
             } else if (d.value > 100000) {
-                return "orange";
+                return "rgb(251, 106, 74)";
             }
-            return "yellow";
+            return "rgb(254, 224, 210)";
         })
         .on("mouseover", function (d) {
             tooltip.transition()

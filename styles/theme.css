@@ -27,11 +27,11 @@ header {
 
 #home_icon {
     width: 3em;
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     padding-right: 2em;
     margin-top: -0.5em;
-}   
+}
 
 .center {
     margin: auto;
@@ -61,6 +61,10 @@ header {
 @media screen and (max-width: 750px) {
     .box {
         width: 30%;
+    }
+
+    #home_icon {
+        display: none;
     }
 }
 
@@ -156,4 +160,36 @@ figcaption {
     font-size: x-small;
     text-align: center;
     font-style: italic;
+}
+
+.x_axis {
+    font-size: 14px;
+}
+
+.y_axis {
+    font-size: 14px;
+}
+
+.bar {
+    cursor: pointer;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #555;
 }

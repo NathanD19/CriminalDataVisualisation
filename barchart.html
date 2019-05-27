@@ -9,6 +9,7 @@
 
     <script src="scripts/d3.v5.min.js"></script>
     <script type="text/javascript" src="scripts/rates_of_crimes_barchart.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/theme.css">
     <link rel="stylesheet" type="text/css" href="styles/charts.css">
 
@@ -26,8 +27,11 @@
 
     <p style="margin-bottom: -40px;" id="chart"></p>
 
-    <span>Hover to see more information on crime subcategories!</span>
+    <span style="font-weight: bold;">Click on a bar to see more information on crime subdivisions!</span>
 
+    <p style="padding-top: 1em;" id="chart_two"></p>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 </body>

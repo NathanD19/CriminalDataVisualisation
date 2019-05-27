@@ -109,7 +109,7 @@ function svgChartCreate(data) {
             d3.csv("data/" + i + ".csv").then(function (data) {
                 var exists = true;
                 try {
-                    var temp = document.getElementById(details_chart)
+                    var temp = document.getElementById(details_chart);
                 } catch (error) {
                     exists = false;
                 }
@@ -118,6 +118,7 @@ function svgChartCreate(data) {
                 }
 
                 sub_chart(data, i);
+                // document.getElementById("chart_two").style.border = "3px dotted #555";
 
                 $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
 

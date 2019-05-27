@@ -37,6 +37,11 @@ function svgChartCreate(data) {
     xScale.domain(data.map(function (d) { return d.crime_type; }));
     yScale.domain([0, d3.max(data, function (d) { return Math.ceil(parseFloat(d.value) / 100000) * 100000; })]);
 
+    var value_total = 0;
+    for (let i = 0; i < data.length; i++) {
+        value_total += parseInt(data[i].value);
+
+    }
 
     //X AXIS
     svg.append("g")
@@ -74,13 +79,18 @@ function svgChartCreate(data) {
         .attr("y", function (d) { return yScale(d.value); })
         .attr("height", function (d) { return height - yScale(d.value); })
         .attr("fill", function (d) {
-            if (d.value > 1500000) {
-                return "rgb(153, 0, 13)";
-            } else if (d.value > 100000) {
-                return "rgb(251, 106, 74)";
+            icolor = ""
+            if (d.value > (value_total / 2)) {
+                color = "rgb(153, 0, 13)";
+            } else if (d.value < (value_total / 2)) {
+                color = "rgb(251, 106, 74)";
             }
-            return "rgb(254, 224, 210)";
+            if (d.value < (value_total / 6)) {
+                color = "rgb(254, 224, 210)";
+            }
+            return color;
         })
+
         .on("mouseover", function (d) {
             tooltip.transition()
                 .duration(250)
@@ -181,8 +191,6 @@ function svgChartCreate(data) {
 
 
 
-
-
 // CREATE SECOND CHART
 
 function sub_chart(data, i) {
@@ -213,6 +221,12 @@ function sub_chart(data, i) {
     xScale.domain(data.map(function (d) { return d.crime_type; }));
     yScale.domain([0, d3.max(data, function (d) { return Math.ceil(parseFloat(d.value) / 100000) * 100000; })]);
 
+
+    var value_total = 0;
+    for (let i = 0; i < data.length; i++) {
+        value_total += parseInt(data[i].value);
+
+    }
 
     //X AXIS
     svg.append("g")
@@ -250,14 +264,18 @@ function sub_chart(data, i) {
         .attr("y", function (d) { return yScale(d.value); })
         .attr("height", function (d) { return height - yScale(d.value); })
         .attr("fill", function (d) {
-            if (d.value > 1500000) {
-                return "rgb(153, 0, 13)";
-            } else if (d.value > 100000) {
-                return "rgb(251, 106, 74)";
+            color = ""
+            if (d.value > (value_total / 2)) {
+                color = "rgb(153, 0, 13)";
+            } else if (d.value < (value_total / 2)) {
+                color = "rgb(251, 106, 74)";
             }
-            return "rgb(254, 224, 210)";
+            if (d.value < (value_total / 6)) {
+                color = "rgb(254, 224, 210)";
+            }
+            return color;
         })
-        /*.on("mouseover", function (d) {
+        .on("mouseover", function (d) {
             tooltip.transition()
                 .duration(250)
                 .style("opacity", 1);
@@ -269,7 +287,7 @@ function sub_chart(data, i) {
             tooltip.transition()
                 .duration(250)
                 .style("opacity", 0);
-        })*/;
+        });
 
 
 
@@ -339,6 +357,16 @@ function sub_chart(data, i) {
         .attr("transform", "rotate(-90)")
         .attr("font-weight", "bold")
         .text("Crime Rate");
+
+    svg.append("text")
+        .attr("class", "xtext")
+        .attr("x", -100)
+        .attr("y", height + 80)
+        .attr("fill", "black")
+        .attr("font-weight", "bold")
+        .attr("font-size", "1em")
+        .text("Hover over a bar to see more information on crime subgroups!");
+
 
 
     function wrap(text, width) {

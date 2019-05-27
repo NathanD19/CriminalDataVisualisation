@@ -1,5 +1,5 @@
-crime_type,value
-Weapons and explosives offences,68185
-Disorderly and offensive conduct,159926
-Public nuisance offences,15278
-Public security offences,363
+crime_type,value,details
+Weapons and explosives offences,68185,"Firearms offences: 15424<br> Prohibited and controlled weapons offences: 50977<br> Explosives offences: 1784<br> "
+Disorderly and offensive conduct,159926,"Riot and affray: 3284<br> Drunk and disorderly in public: 99416<br> Offensive conduct: 41667<br> Offensive language: 8339<br> Criminal intent: 4645<br> Disorderly conduct: 2575<br> "
+Public nuisance offences,15278,"Privacy offences: 304<br> Hoaxes: 1356<br> Begging: 1529<br> Defamation and libel: 2<br> Improper movement on public or private space: 11142<br> Other public nuisance offences: 945<br> "
+Public security offences,363,"Immigration offences: 4<br> Sabotage: 1<br> Hacking: 317<br> Terrorism offences: 23<br> Other public security offences: 18<br> "

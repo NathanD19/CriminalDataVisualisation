@@ -1,5 +1,5 @@
-crime_type,value
-Drug dealing and trafficking,25738
-Cultivate or manufacture drugs,10060
-Drug use and possession,94442
-Other drug offences,92
+crime_type,value,details
+Drug dealing and trafficking,25738,"Drug dealing: 153<br> Drug trafficking: 25585<br> "
+Cultivate or manufacture drugs,10060,"Cultivate drugs: 7810<br> Manufacture drugs: 1<br> Possess drug manufacturing equipment or precursor: 2249<br> "
+Drug use and possession,94442,"Drug use: 6380<br> Drug possession: 88062<br> "
+Other drug offences,92,"Other drug offences: 92<br> "

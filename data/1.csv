@@ -1,7 +1,7 @@
-crime_type,value
-Arson,32645,
-Property damage,406813,
-Theft,1311036,
-Deception,152345,
-Bribery,99,
-Burglary/Break and enter,448468
+crime_type,value,details
+Arson,32645,"Cause damage by fire: 28258<br> Cause a bushfire: 610<br> Other fire related offences: 3777<br> "
+Property damage,406813,"Criminal damage: 376599<br> Graffiti: 27597<br> Other property damage offences: 2617<br> "
+Theft,1311036,"Motor vehicle theft: 143460<br> Steal from a motor vehicle: 475205<br> Steal from a retail store: 188325<br> Theft of a bicycle: 50390<br> Receiving or handling stolen goods: 50348<br> Fare evasion: 694<br> Other theft: 402614<br> "
+Deception,152345,"Forgery and counterfeiting: 16042<br> Possess equipment to make false instrument: 40<br> Obtain benefit by deception: 128671<br> State false information: 6276<br> Deceptive business practices: 93<br> Professional malpractice and misrepresentation: 525<br> Other deception offences: 698<br> "
+Bribery,99,"Bribery of officials: 99<br>"
+Burglary/Break and enter,448468,"Residential aggravated burglary: 23019<br> Non-residential aggravated burglary: 891<br> Unknown aggravated burglary: 101<br> Residential non-aggravated burglary: 277906<br> Non-residential non-aggravated burglary: 143893<br> Unknown non-aggravated burglary: 2658<br> "

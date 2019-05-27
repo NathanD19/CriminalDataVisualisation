@@ -1,9 +1,9 @@
-crime_type,value
-Homicide and related offences,1619
-Assault and related offences,323561
-Sexual offences,57659
-Abduction and related offences,3384
-Robbery,22507
-Blackmail and extortion,1307
-Dangerous and negligent acts endangering people,29214
-"Stalking, harassment and threatening behaviour",52748
+crime_type,value,details
+Homicide and related offences,1619,"Murder: 511<br> Attempted murder: 342<br> Manslaughter & A13 Accessory/conspiracy to murder: 169<br> Driving causing death: 597<br> Assault police, emergency services or other authorised officer: 17206<br> "
+Assault and related offences,323561,"Assault police, emergency services or other authorised officer: 17206<br> FV Serious assault: 66080<br> Non-FV Serious assault: 93692<br> FV Common assault: 77120<br> Non-FV Common assault: 69463<br> "
+Sexual offences,57659,"Rape: 23286<br> Indecent assault: 26023<br> Incest: 1835<br> Sexual offences against children: 4831<br> Other sexual offences: 1684<br> "
+Abduction and related offences,3384,"Abduction: 1009<br> False imprisonment: 2372<br> Slavery and sexual servitude offences: 3<br> "
+Robbery,22507,"Aggravated robbery: 20408<br> Non-Aggravated robbery: 2099<br> "
+Blackmail and extortion,1307,"Blackmail: 810<br> Extortion: 497<br> "
+Dangerous and negligent acts endangering people,29214,"Dangerous driving: 3890<br> Neglect or ill treatment of people: 524<br> Throw or discharge object endangering people: 6638<br> Other dangerous or negligent acts endangering people: 18162<br> "
+"Stalking, harassment and threatening behaviour",52748,"FV Stalking: 7218<br> Non-FV Stalking: 8418<br> FV Harassment and private nuisance: 2541<br> Non-FV Harassment and private nuisance: 3792<br> FV Threatening behaviour: 14985<br> Non-FV Threatening behaviour: 15794<br> "

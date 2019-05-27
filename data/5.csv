@@ -1,5 +1,5 @@
-crime_type,value
-Regulatory driving offences,178
-Transport regulation offences,3079
-Other government regulatory offences,5544
-Miscellaneous offences,2366
+crime_type,value,details
+Regulatory driving offences,178,"Drink driving: 89<br> Drug driving: 4<br> Parking offences: 3<br> Licensing offences: 31<br> Registration and roadworthiness offences: 11<br> Other regulatory driving offences: 40<br> "
+Transport regulation offences,3079,"Public transport: 1160<br> Aviation regulations offences: 15<br> Maritime regulations offences: 276<br> Pedestrian offences: 93<br> Other transport regulation offences: 1535<br> "
+Other government regulatory offences,5544,"Betting and gaming offences: 146<br> Commercial regulation offences: 747<br> Liquor and tobacco licensing offences: 3239<br> Pornography and censorship offences: 237<br> Intellectual property: 107<br> Prostitution offences: 642<br> Other government regulatory offences: 426<br> "
+Miscellaneous offences,2366,"Environmental offences: 229<br> Public health and safety offences: 303<br> Cruelty to animals: 1403<br> Dangerous substance offences: 99<br> Other miscellaneous offences: 332<br> "

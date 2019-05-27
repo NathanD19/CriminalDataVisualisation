@@ -1,3 +1,3 @@
-crime_type,value
-Justice procedures,43013
-Breaches of orders,227543
+crime_type,value,details
+Justice procedures,43013,"Escape custody: 944<br> Fail to appear: 12<br> Resist or hinder officer: 24535<br> Pervert the course of justice or commit perjury: 5377<br> Prison regulation offences: 5010<br> Other justice procedures offences: 7135<br> "
+Breaches of orders,227543,"Breach family violence order: 101000<br> Breach intervention order: 10618<br> Breach bail conditions: 108277<br> Breach of other orders: 7648<br> "

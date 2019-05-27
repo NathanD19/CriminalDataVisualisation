@@ -316,7 +316,7 @@ function sub_chart(data, i) {
         .attr("y", 0)
         .attr("fill", "black")
         .attr("font-weight", "bold")
-        .attr("font-size", "1.2em")
+        .attr("font-size", "1.5em")
         .text(title);
 
     // X AXIS TEXT

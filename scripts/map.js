@@ -80,7 +80,7 @@ function geomap(crimedata) {
         legend.append("text")
             .attr("x", w / 1.3)
             .attr("y", 70)
-            .text("Legend:");
+            .text("Legend: Crimes");
 
         svg.append("text")
             .attr("x", w / 1.25)
